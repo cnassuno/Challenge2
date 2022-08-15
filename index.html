@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+    
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>index</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">  
+</head> 
+
+<body>
+    <header class="cabecalho">         
+        <img src = "logoalura.png" class = "logo" alt = "logo Alura com letra a"><h1 class="titulo">Jogo da Forca</h1>  
+    </header>    
+        
+    <main>
+      <section class="pagInicial">
+        <canvas id = "forca" width="1200" height="400" ></canvas> 
+        <script src="script.js"></script>              
+            
+        <nav class="inicio">
+         <ul>            
+            <li><a href="inicioJogoForca.html">Jogar</a></li>          
+         </ul>   
+        </nav>
+    
+
+        <section class="forca">     
+               <script>
+                    var tela = document.querySelector("canvas");
+                    var pincel = tela.getContext("2d");
+                    pincel.fillStyle = "lightgray";
+                    pincel.fillRect(0,0,1200,400);
+
+                    //base forca horiz -retangulo1
+                        pincel.fillStyle= "#0A3871";
+                        pincel.fillRect(300,300,200,5);
+                    
+                    //haste forca vertical-retangulo2
+                        pincel.fillStyle= "darkblue";
+                        pincel.fillRect(350,300,6,-230);
+
+                    //apoio superior horizontal-retangulo3
+                        pincel.fillStyle= "darkblue";
+                        pincel.fillRect(350,70,70,5);
+
+                    //corda forca-retangulo4
+                        pincel.fillStyle= "darkblue";
+                        pincel.fillRect(420,70,5,30);
+
+                    //cabeça               
+                        pincel.strokeStyle = "darkblue";
+                        pincel.lineWidth = 5;
+                        pincel.lineCap = "round";
+                        pincel.lineJoin = "round";   
+                        pincel.beginPath () ;  
+                        pincel.arc(421,116, 14, 0, 2*3.14);
+                        pincel.stroke();
+                     
+                    //pescoço      
+                        pincel.fillStyle= "darkblue";
+                        pincel.lineWidth = 5;
+                        pincel.lineCap = "round"
+                        pincel.lineJoin = "round"
+                        pincel.moveTo(421,130);
+                        pincel.lineTo(421,140);
+                        pincel.stroke();
+       
+                    //corpo
+                        pincel.fillStyle= "darkblue";
+                        pincel.lineWidth = 5;
+                        pincel.lineCap = "round"
+                        pincel.lineJoin = "round"
+                        pincel.moveTo(421,140);
+                        pincel.lineTo(421,200);
+                        pincel.stroke();
+       
+                    //braço direito
+                        pincel.fillStyle= "darkblue";
+                        pincel.lineWidth = 5;
+                        pincel.lineCap = "round";
+                        pincel.lineJoin = "round";
+                        pincel.moveTo(421,140);
+                        pincel.lineTo(460,170);
+                        pincel.stroke(); 
+       
+
+                    //braço esquerdo
+                        pincel.fillStyle= "darkblue";
+                        pincel.lineWidth = 5;
+                        pincel.lineCap = "round"
+                        pincel.lineJoin = "round"
+                        pincel.moveTo(421,140);
+                        pincel.lineTo(385,170);
+                        pincel.stroke();
+                       
+                    //perna direita
+                        pincel.fillStyle= "darkblue";
+                        pincel.lineWidth = 5
+                        pincel.lineCap = "round"
+                        pincel.lineJoin = "round"   
+                        pincel.moveTo(421,200);
+                        pincel.lineTo(455,238);
+                        pincel.stroke();
+         
+                    //perna esquerda   
+                            pincel.fillStyle= "darkblue";
+                            pincel.lineWidth = 5
+                            pincel.lineCap = "round"
+                            pincel.lineJoin = "round"   
+                            pincel.moveTo(421,200);
+                            pincel.lineTo(390,238);
+                            pincel.stroke();  
+               </script>
+        </section> 
+      </section>
+    </main>
+      
+   <footer class="rodape">
+        <p> feito por Cristina Nassuno 2022 - Curso Alura-One </p>
+   </footer>
+
+</body>
+</html>
+
+

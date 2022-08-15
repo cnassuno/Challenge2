@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+    
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio-Jogo da Forca</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">        
+</head>
+
+<body>
+    <header>
+        <img src = "logoalura.png" class = "logo" alt = "logo Alura com letra a">  
+    </header>    
+        
+    <main>
+        <div id = "div-aparece-forca" class = "canvas">      
+        <canvas id = "forca" width="1200" height="700" ></canvas> 
+        <div class = "sublinhado">
+      
+        <div class = "botoes">
+            <input class = "btn-azul" type = "submit" value = "Novo Jogo" id = "btn-novo-jogo">
+         </div>
+                 
+    <section class="desenhoForca">     
+                
+        <section class="inicioForca">
+                <script>
+                    var tela = document.querySelector("canvas");
+                    var pincel = tela.getContext("2d");
+                    pincel.fillStyle = "lightgray";
+                    pincel.fillRect(0,0,1200,700);
+
+                    //base forca horiz -retangulo1
+                        pincel.fillStyle= "#0A3871";
+                        pincel.fillRect(300,300,200,5);
+                    
+                    //haste forca vertical-retangulo2
+                        pincel.fillStyle= "darkblue";
+                        pincel.fillRect(350,300,6,-230);
+
+                    //apoio superior horizontal-retangulo3
+                        pincel.fillStyle= "darkblue";
+                        pincel.fillRect(350,70,70,5);
+
+                    //corda forca-retangulo4
+                        pincel.fillStyle= "darkblue";
+                        pincel.fillRect(420,70,5,30);
+                </script>
+        </section>
+    </section>
+
+     <script src = "script.js"></script> 
+        
+                             
+    </main>
+
+    <footer class="rodape">
+        <p> feito por Cristina Nassuno 2022 - Curso Alura-One </p>
+    </footer>
+
+</body>
+
+</html>
+
+
